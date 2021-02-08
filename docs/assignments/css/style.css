@@ -1,0 +1,17 @@
+html, body {
+    position: relative;
+    margin: 0;
+}
+
+body {
+    --hoofdKleur:#fbff00;
+    --achtergrondKleur:#ff0000;
+    
+    font-family:"Saira", sans-serif;
+    color: var(--hoofdKleur);
+    background-color: var(--achtergrondKleur);
+}
+
+header{
+    background: linear-gradient(110deg, #ff0000 60%, #a00000 60%)
+}
