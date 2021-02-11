@@ -1,17 +1,82 @@
+
 html, body {
+    height:100%;
+}
+
+body{
+
+}
+
+@keyframes ronddraaien {
+    0%{
+        transform:rotate(0turn);
+    }
+    100%{
+        transform:rotate(1turn);
+    }
+}
+
+/* @keyframes stop_ronddraaien{
+    0%{
+        transform:rotate(0turn);
+    }
+    50%{
+        transform:rotate(1turn);
+    }
+    100%{
+        transform:rotate(1turn);
+    }
+} */
+
+input[type=checkbox]:checked ~ .bubble:after {
+    animation:ronddraaien .25s ease-out;
+}
+
+body > div{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: conic-gradient(red, yellow, yellow, red, red, yellow, yellow, red, red, yellow, yellow, red);
+    /*animation-name:ronddraaien;
+    animation-duration:2s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;*/
+}
+
+input[type=checkbox]:checked ~ .bubble:after {
+  animation:size .25s ease-out;
+}
+
+aside{
+    background: rgba(255, 111, 111, 0.109);
+}
+
+main{
     position: relative;
-    margin: 0;
-}
-
-body {
-    --hoofdKleur:#fbff00;
-    --achtergrondKleur:#ff0000;
+    display: grid;
     
-    font-family:"Saira", sans-serif;
-    color: var(--hoofdKleur);
-    background-color: var(--achtergrondKleur);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
 }
 
-header{
-    background: linear-gradient(110deg, #ff0000 60%, #a00000 60%)
+summary{
+    padding: 1em;
+    background: #ddd;
+    margin-bottom: 1em;
+    cursor: pointer;
+    outline: none;
+    border-radius: .3em;
+    font-weight: bold;
+        
 }
+
+
+main > details > summary:hover {
+    background: rgb(200, 200, 200);
+}
+
