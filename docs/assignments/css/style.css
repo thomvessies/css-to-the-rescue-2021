@@ -4,7 +4,7 @@ html, body {
 }
 
 body{
-
+    
 }
 
 @keyframes ronddraaien {
@@ -34,17 +34,19 @@ input[type=checkbox]:checked ~ .bubble:after {
 
 body > div{
     content: "";
-    position: absolute;
+    position: fixed;
     width: 200%;
-    height: 200%;
-    top: -50%;
+    height: 300%;
+    top: -100%;
     left: -50%;
+    border-radius: 50%;
     z-index: -1;
     background: conic-gradient(red, yellow, yellow, red, red, yellow, yellow, red, red, yellow, yellow, red);
-    animation-name:ronddraaien;
+    animation: ronddraaien 5s linear infinite
+    /* animation-name:ronddraaien;
     animation-duration:2s;
     animation-timing-function:linear;
-    animation-iteration-count:infinite;
+    animation-iteration-count:infinite; */
 }
 
 input[type=checkbox]:checked ~ .bubble:after {
