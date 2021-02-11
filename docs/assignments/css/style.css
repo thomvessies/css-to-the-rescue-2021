@@ -41,10 +41,10 @@ body > div{
     left: -50%;
     z-index: -1;
     background: conic-gradient(red, yellow, yellow, red, red, yellow, yellow, red, red, yellow, yellow, red);
-    /*animation-name:ronddraaien;
+    animation-name:ronddraaien;
     animation-duration:2s;
     animation-timing-function:linear;
-    animation-iteration-count:infinite;*/
+    animation-iteration-count:infinite;
 }
 
 input[type=checkbox]:checked ~ .bubble:after {
