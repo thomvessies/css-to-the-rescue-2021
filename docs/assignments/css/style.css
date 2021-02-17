@@ -16,44 +16,164 @@ body{
     }
 }
 
-/* @keyframes stop_ronddraaien{
-    0%{
-        transform:rotate(0turn);
-    }
-    50%{
-        transform:rotate(1turn);
-    }
-    100%{
-        transform:rotate(1turn);
-    }
-} */
-
-input[type=checkbox]:checked ~ .bubble:after {
-    animation:ronddraaien .25s ease-out;
+body > div:nth-child(1){
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
 }
 
-body > div{
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 300%;
-    top: -100%;
-    left: -50%;
-    border-radius: 50%;
-    z-index: -1;
-    background: conic-gradient(red, yellow, yellow, red, red, yellow, yellow, red, red, yellow, yellow, red);
-    animation: ronddraaien 5s linear infinite
-    /* animation-name:ronddraaien;
-    animation-duration:2s;
-    animation-timing-function:linear;
-    animation-iteration-count:infinite; */
+
+body > div:nth-child(2){
+    animation:slide 4s ease-in-out infinite alternate-reverse;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
 }
 
-input[type=checkbox]:checked ~ .bubble:after {
-  animation:size .25s ease-out;
+body > div:nth-child(3){
+    animation:slide 5s ease-in-out infinite alternate;
+    background-image: linear-gradient(60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
 }
 
-aside{
+body > div:nth-child(1){
+    animation:slide 1s ease-in-out infinite alternate-reverse;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+
+body > div:nth-child(2){
+    animation:slide 2s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+body > div:nth-child(3){
+    animation:slide 3s ease-in-out infinite alternate-reverse;
+    background-image: linear-gradient(60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+body > div:nth-child(4){
+    animation:slide 4s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+
+body > div:nth-child(5){
+    animation:slide 5s ease-in-out infinite alternate-reverse;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+body > div:nth-child(6){
+    animation:slide 6s ease-in-out infinite alternate;
+    background-image: linear-gradient(60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+body > div:nth-child(7){
+    animation:slide 7s ease-in-out infinite alternate-reverse;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+
+body > div:nth-child(8){
+    animation:slide 8s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+body > div:nth-child(9){
+    animation:slide 9s ease-in-out infinite alternate;
+    background-image: linear-gradient(60deg, rgb(255, 0, 0) 50%, rgb(255, 255, 0) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+header{
     background: rgba(255, 111, 111, 0.109);
 }
 
@@ -66,19 +186,40 @@ main{
     grid-row-gap: 1em;
 }
 
+details {
+    transition: 1s;
+}
+
+details[open] {
+    background: rgba(0, 0, 50, 0.3);
+    
+}
+
 summary{
+    background-color:rgba(255,255,255,.4);
     padding: 1em;
-    background: #ddd;
     margin-bottom: 1em;
     cursor: pointer;
     outline: none;
     border-radius: .3em;
     font-weight: bold;
-        
+
 }
+
 
 
 main > details > summary:hover {
-    background: rgb(200, 200, 200);
+    background: rgb(255, 255, 255, 0.8);
 }
 
+input[type=checkbox]:checked ~ .bubble:after {
+    animation: ronddraaien .25s ease-out;
+}
+
+body > header > div {
+    position: absolute;
+    top: 95%;
+    left: 98%;
+    transform: translate(-50% -50%);
+    
+}
